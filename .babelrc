@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["C:/Users/Елена/Desktop/projects/flate/"],
+      "alias": {
+        "@assets": "./assets",
+        "@helpers": "./helpers",
+        "@modules": "./src"
+      }
+    }]
+  ]
+}

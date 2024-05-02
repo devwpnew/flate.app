@@ -1,0 +1,130 @@
+{
+  "expo": {
+    "scheme": "flate.pro",
+    "name": "FLATE",
+    "slug": "flate",
+    "version": "2.1.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/6d3d822d-d688-4bbe-abf1-ebb90d8c8c3c"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "associatedDomains": ["applinks:flate.pro"],
+      "supportsTablet": true,
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryDiskSpace",
+            "NSPrivacyAccessedAPITypeReasons": ["E174.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategorySystemBootTime",
+            "NSPrivacyAccessedAPITypeReasons": ["8FFB.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+            "NSPrivacyAccessedAPITypeReasons": ["DDA9.1"]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          }
+        ]
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Разрешить $(PRODUCT_NAME) службу определения местоположения.",
+        "NSCameraUsageDescription": "Для использования камеры при создании и загрузке фотографий в ваше объявление.",
+        "NSPhotoLibraryUsageDescription": "Разрешить $(PRODUCT_NAME) просматривать ваши фотографии.",
+        "NSPhotoLibraryAddUsageDescription": "Разрешить $(PRODUCT_NAME) сохранять фотографии."
+      },
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      },
+      "bundleIdentifier": "flate.pro",
+      "buildNumber": "3",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAC5QwsSuLWH8Cq-3r2YqsfDIxwy-Q9U7I"
+      }
+    },
+    "android": {
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "flate.pro",
+              "pathPrefix": "/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "flate.pro",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
+      ],
+      "runtimeVersion": "2.1.2",
+      "versionCode": 2009,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAC5QwsSuLWH8Cq-3r2YqsfDIxwy-Q9U7I"
+        }
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6d3d822d-d688-4bbe-abf1-ebb90d8c8c3c"
+      }
+    },
+    "owner": "wpnew",
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Разрешить $(PRODUCT_NAME) просматривать ваши фотографии.",
+          "savePhotosPermission": "Разрешить $(PRODUCT_NAME) сохранять фотографии.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-build-properties",
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "expo-font",
+      "expo-secure-store",
+      "./plugins/withAndroidVerifiedLinksWorkaround"
+    ]
+  }
+}
