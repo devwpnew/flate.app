@@ -93,7 +93,7 @@ export default function Home({ navigation }) {
         city_link: activeCity.id,
         premium: "!false",
       };
-    }, [activeCity])
+    }, [activeCity,isFetch])
   );
 
   const [isLoading, setIsLoading] = useState(false);

@@ -3,7 +3,7 @@ import api from "../../../api/service/api";
 import { useIsFocused } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 import { setAddForm } from "../../store/global/addForm/addForm";
 import { setFetchState } from "../../store/global/helpers/fetchTrigger";
 
@@ -221,7 +221,11 @@ export default function Add({ route, navigation, product }) {
       console.log(res, "res");
       console.log(form);
 
-      if (res?.full?.itemId || res?.full?.data?.itemId) {
+      if (
+        res?.full?.itemId ||
+        res?.full?.data?.itemId ||
+        Platform.OS === "android"
+      ) {
         const successT = (
           <>
             <Title style={{ marginBottom: 20 }}>
